@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rivale Belano-Praktikum AR.js</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.2/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+        <!-- Menggunakan a-marker sehingga objek berada relatif terhadap marker -->
+        <a-marker preset="hiro">
+            <!-- Objek cylinder kuning, posisinya (0,0.5,0) relatif ke pusat marker -->
+            <a-cylinder position="0 0.5 0" radius="0.5" height="1" material="color: yellow;"></a-cylinder>
+            <!-- Objek cylinder biru muda di atas cylinder kuning dengan posisi (0,1.5,0) -->
+            <a-cylinder position="0 1.5 0" radius="0.25" height="0.5" material="color: lightblue;"></a-cylinder>
+        </a-marker>
+        <!-- Entity kamera untuk menampilkan AR -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
